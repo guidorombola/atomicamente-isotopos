@@ -1,0 +1,136 @@
+#page-content-wrapper {
+  position: relative !important;
+}
+
+#titulo-elementos {
+  font-size: 1.8em;
+}
+
+.navbar-toggle {
+  background: white;
+  z-index: 1000;
+  margin: 10px;
+}
+.navbar-toggle .icon-bar {
+  background: rgb(197, 181, 181);
+  color: #333;
+}
+
+.periodic-menu {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.periodic-period {
+  display: block;
+  margin-top: 5px;
+}
+
+.periodic-menu .periodic-element {
+  width: 40px;
+  height: 40px;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+  text-align:center;
+  border: 1.5px solid black;
+  border-radius: 0.5em;
+  float: left;
+  padding-top: 10px;
+  color: white;
+}
+
+.periodic-menu .periodic-element:hover {
+  border: 1px solid #ccc;
+  background: #333;
+  cursor: pointer;
+}
+
+#bottom-legend {
+  display: none;
+  margin-left: 20px;
+  position: absolute;
+  max-width: 80%;
+  bottom: 0px;
+  background: rgba(255,255,255,0.5);
+  padding: 15px;
+  border-radius: 15px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#bottom-legend .badge {
+  float: right;
+  margin-left: 15px;
+}
+
+#bottom-legend h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+#bottom-legend button {
+  margin-top: 5px;
+}
+
+#bottom-legend dl {
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+
+#bottom-legend dl dd {
+  margin-left: 100px;
+}
+
+#bottom-legend dl dt {
+  width: 100px;
+  text-align:left;
+}
+
+#bottom-legend .nameHistory {
+  font-size: 12px;
+}
+
+#bottom-legend .element-link {
+  margin-right: 30px;
+  font-size: 12px;
+  color: #3333ff;
+  margin-top: 10px;
+}
+
+.dropdown-menu > li > a {
+  padding: 5px 10px;
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
+  margin-left:0px;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width : 767px) {
+  #bottom-legend {
+    max-width: 90%;
+    margin-left: 5%;
+  }
+  #bottom-legend dl dt {
+    float: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .collapse.dont-collapse-sm {
+    display: block;
+    height: auto !important;
+    visibility: visible;
+  }
+}
+
+#AtomicStage {
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) );
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  height: 100vh;
+}
+
