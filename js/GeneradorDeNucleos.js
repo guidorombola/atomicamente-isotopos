@@ -54,9 +54,12 @@ function generarParticulasDelNucleo(position, particleColor){
         anillos = 16;
     
     var materialEsfera =
-      new THREE.MeshLambertMaterial(
+      new THREE.MeshPhysicalMaterial(
         {
           color: particleColor,
+          roughness: 0.5,
+          metalness: 0.5,
+          emmisive: 0x993b3b,
         });
 
     var esfera = new THREE.Mesh(
