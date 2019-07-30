@@ -19,7 +19,13 @@ $(document).ready(function() {
 document.getElementById('AtomicStage').appendChild(renderer.domElement);
 
 // Add light 
-var ambient = new THREE.AmbientLight( 0xFF33E7, 6 );
+var ambient = new THREE.AmbientLight(0x747474, 6);
+var pointLight = new THREE.DirectionalLight( 0xffffff, 8);
+pointLight.position.set( 1, 0, 0 ).normalize();
+scene.add( pointLight );
+var pointLight = new THREE.DirectionalLight( 0xffffff, 2);
+pointLight.position.set( -1, 0, 0 ).normalize();
+scene.add( pointLight );
 
 scene.add(ambient);
 
