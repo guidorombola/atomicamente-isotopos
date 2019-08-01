@@ -46,24 +46,24 @@
         <!-- Graficos -->
         <div class="col-md-10" id="page-content-wrapper"> 
           <div class="d-md-none">
-              <button type="button" id="menu-toggle" style="position:absolute;" class="btn navbar-toggle" data-toggle="collapse" data-target="#colapso1" style="float:none;">
+              <button type="button" id="menu-toggle" class="btn navbar-toggle" data-toggle="collapse" data-target="#colapso1" style="float:none;">
                   Mostrar/Ocultar   
               </button>
             </div>
           <div class="row">
-            <p class="lead" style="text-align:center;position: absolute;width:100%;color: #eee;padding: 20px 40px;margin-top:50px;">Clickea un elemento para comenzar</p>
+            <p class="lead" id="start-info">Clickea un elemento para comenzar</p>
             <div id="bottom-legend">
               <div class="row">
                 <div class="col-12">
                   <h3><span class="element-name"></span> (<span class="element-symbol"></span>)</h3>
                   <p><span class="nameHistory"></span></p>
                   <!--DESPLEGABLE ISOTOPOS-->
-                  <div class="dropup" id="dropup-isotopes" style="display:inline-block;">        
+                  <div class="dropup" id="dropup-isotopes">        
                   </div>
                   <!--DESPLEGABLE NUCLEO-->
-                  <div class="dropup" id="dropup-nucleus" style="display:inline-block;">
+                  <div class="dropup" id="dropup-nucleus">
                   </div>
-                  <p style="margin-top:10px;font-size: 10px;">Scroll para hacer zoom, arrastrar para rotar nucleo.</p>
+                  <p id="help-info">Scroll para hacer zoom, arrastrar para rotar nucleo.</p>
                 </div>
               </div>
             </div>
