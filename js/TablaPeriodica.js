@@ -98,7 +98,23 @@ var elementsIncluded = [{
     state : 'Solid',
     meltingPoint : '453.6 K',
     boilingPoint : '1615 K',
-    //isotopes : '<sup>7</sup>Li',
+    protons: [{x:0.5,y:0,z:0},{x:-0.5,y:0,z:0},{x:0,y:0,z:-0.5}],
+    isotopes: [
+      {
+        name: "Litio 7",
+        positions: [
+          {x:0,y:0.5,z:0},{x:0,y:-0.5,z:0},{x:0,y:0,z:0.5},{x:0.5,y:0.5,z:0}
+        ],
+      },
+      {
+        name: "Litio 6",
+        positions:  
+          [
+            {x:0,y:0.5,z:0},{x:0,y:-0.5,z:0},{x:0,y:0,z:0.5}
+          ]
+      },
+       
+    ],
     electronConfig : '2s<sup>1</sup>',
     oxidationState : '+1',
     nameHistory : 'Greek <em>lithos</em> meaning stone.',
@@ -122,7 +138,29 @@ var elementsIncluded = [{
     state : 'Solid',
     meltingPoint : '1560 K',
     boilingPoint : '2471 K',
-    //isotopes : '<sup>9</sup>Be',
+    protons: [{x:0.5,y:0,z:0},{x:-0.5,y:0,z:0},{x:0,y:0,z:-0.5},{x:0.5,y:0.5,z:0.5}],
+    isotopes: [
+      {
+        name: "Berilio 9",
+        positions: [
+          {x:0,y:0.5,z:0},{x:0,y:-0.5,z:0},{x:0,y:0,z:0.5},{x:-0.5,y:-0.5,z:-0.5}, {x: 0, y:-0.5, z:-0.5}
+        ],
+      },
+      {
+        name: "Berilio 10",
+        positions:  
+          [
+            {x:0,y:0.5,z:0},{x:0,y:-0.5,z:0},{x:0,y:0,z:0.5},{x:-0.5,y:-0.5,z:-0.5}, {x: 0, y:-0.5, z:-0.5}, {x: 0.5,y:0.5,z:-0.5}
+          ]
+      },
+      {
+        name: "Berilio 7",
+        positions:  
+          [
+            {x:0,y:0.5,z:0},{x:0,y:-0.5,z:0},{x:0,y:0,z:0.5}
+          ]
+      },
+    ], 
     electronConfig : '2s<sup>2</sup>',
     oxidationState : '+2',
     nameHistory : 'Greek name for beryl, <em>beryllo</em>.',
@@ -146,6 +184,22 @@ var elementsIncluded = [{
     state : 'Solid',
     meltingPoint : '2350 K',
     boilingPoint : '4273 K',
+    protons: [{x:0.5,y:0,z:0},{x:-0.5,y:0,z:0},{x:0,y:0,z:-0.5},{x:0.5,y:0.5,z:0.5},{x:0.5,y:0.5,z:-0.5}],
+    isotopes: [
+      {
+        name: "Boro 11",
+        positions: [
+          {x:0,y:0.5,z:0},{x:0,y:-0.5,z:0},{x:0,y:0,z:0.5},{x:-0.5,y:-0.5,z:-0.5}, {x:-0.5,y:-0.5,z:0.5}, {x: 0, y:-0.5, z:-0.5}
+        ],
+      },
+      {
+        name: "Boro 10",
+        positions:  
+          [
+            {x:0,y:0.5,z:0},{x:0,y:-0.5,z:0},{x:0,y:0,z:0.5},{x:-0.5,y:-0.5,z:-0.5},{x:-0.5,y:-0.5,z:0.5}
+          ]
+      },
+    ], 
     //isotopes : '<sup>11</sup>B',
     electronConfig : '2s<sup>2</sup>2p<sup>1</sup>',
     oxidationState : '+2',
@@ -170,7 +224,29 @@ var elementsIncluded = [{
     state : 'Solid',
     meltingPoint : '2350 K',
     boilingPoint : '4273 K',
-    //isotopes : '<sup>12</sup>C,<sup>13</sup>C,<sup>14</sup>C',
+    protons: [{x:0.5,y:0,z:0},{x:-0.5,y:0,z:0},{x:0,y:0,z:-0.5},{x:0.5,y:0.5,z:0.5},{x:0.5,y:0.5,z:-0.5},{x:0.5,y:-0.5,z:0.5}],
+    isotopes: [
+      {
+        name: "Carbono 12",
+        positions: [
+          {x:0,y:0.5,z:0},{x:0,y:-0.5,z:0},{x:0,y:0,z:0.5},{x:-0.5,y:-0.5,z:-0.5}, {x:-0.5,y:-0.5,z:0.5}, {x: 0.5, y:-0.5, z:-0.5}
+        ],
+      },
+      {
+        name: "Carbono 13",
+        positions:  
+          [
+            {x:0,y:0.5,z:0},{x:0,y:-0.5,z:0},{x:0,y:0,z:0.5},{x:-0.5,y:-0.5,z:-0.5},{x:-0.5,y:-0.5,z:0.5},{x: 0.5, y:-0.5, z:-0.5}, {x: 0.5, y: 0, z: -0.5}
+          ]
+      },
+      {
+        name: "Carbono 14",
+        positions:  
+          [
+            {x:0,y:0.5,z:0},{x:0,y:-0.5,z:0},{x:0,y:0,z:0.5},{x:-0.5,y:-0.5,z:-0.5},{x:-0.5,y:-0.5,z:0.5}, {x: 0.5, y: 0, z: -0.5},{x: 0.5, y:-0.5, z:-0.5}, {x: -0.5, y:0, z:-0.5}
+          ]
+      },
+    ], 
     electronConfig : '2s<sup>2</sup>2p<sup>2</sup>',
     oxidationState : '<u>+4</u>,+2',
     nameHistory : 'Latin <em>carbo</em>, meaning charcoal.',
