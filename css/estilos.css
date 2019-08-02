@@ -1,3 +1,7 @@
+#sidebar-wrapper {
+  background: blue;
+}
+
 #page-content-wrapper {
   position: relative !important;
 }
@@ -32,10 +36,6 @@ button#menu-toggle {
   background: white;
   z-index: 1000;
   margin: 10px;
-}
-.navbar-toggle .icon-bar {
-  background: rgb(197, 181, 181);
-  color: #333;
 }
 
 .periodic-menu {
@@ -80,64 +80,27 @@ button#menu-toggle {
   margin-bottom: 20px;
 }
 
-#bottom-legend .badge {
-  float: right;
-  margin-left: 15px;
-}
-
 #bottom-legend h3 {
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
 }
 
-#bottom-legend button {
-  margin-top: 5px;
-}
-
-#bottom-legend dl {
-  margin-bottom: 0px;
-  font-size: 12px;
-}
-
-#bottom-legend dl dd {
-  margin-left: 100px;
-}
-
-#bottom-legend dl dt {
-  width: 100px;
-  text-align:left;
-}
-
-#bottom-legend .nameHistory {
-  font-size: 12px;
-}
-
-#bottom-legend .element-link {
-  margin-right: 30px;
-  font-size: 12px;
-  color: #3333ff;
-  margin-top: 10px;
-}
-
 .dropdown-menu > li > a {
   padding: 5px 10px;
 }
 
-input[type=checkbox] {
+input[type=checkbox], input[type=radio] {
   transform: scale(1.5);
   margin-left:0px;
   margin-right: 10px;
 }
 
-@media only screen and (max-width : 767px) {
-  #bottom-legend {
-    max-width: 90%;
-    margin-left: 5%;
-  }
-  #bottom-legend dl dt {
-    float: left;
-  }
+#AtomicStage {
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) );
+  background-position: center center;
+  overflow: hidden;
+  height: 100vh;
 }
 
 @media (min-width: 768px) {
@@ -147,12 +110,3 @@ input[type=checkbox] {
     visibility: visible;
   }
 }
-
-#AtomicStage {
-  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) );
-  background-size: cover;
-  background-position: center center;
-  overflow: hidden;
-  height: 100vh;
-}
-
