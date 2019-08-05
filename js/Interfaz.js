@@ -83,12 +83,9 @@
   }
 
   function detectarElementoClickeado(elementoActual){
-    var elementoClickeado;
-    elementsIncluded.forEach(function(element) {
-      if(element.name===$(elementoActual).attr('id')) {
-        elementoClickeado = element;
-      }
-    });
+    var elementoClickeado = elementsIncluded.find(
+      function(elemento) {return elemento.name === $(elementoActual).attr('id')}
+    );
     return elementoClickeado;
   }
 
