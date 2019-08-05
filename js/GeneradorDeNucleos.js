@@ -62,7 +62,6 @@ function generarParticulasDelNucleo(position, particleColor){
           color: particleColor,
           roughness: 0.5,
           metalness: 0.5,
-          emmisive: 0x993b3b,
         });
 
     var esfera = new THREE.Mesh(
