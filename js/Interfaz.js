@@ -72,13 +72,10 @@
   }
 
   function limpiarElementosEnPantalla(){
-    for( var i = scene.children.length - 1; i >= 0; i--) {
-      if(typeof scene.children[i] !== 'undefined') {
-        if(scene.children[i].type.indexOf('Group')>-1) {
-            scene.remove(scene.children[i]);
-        }
-      }
-    }
+    elementosAEliminar = scene.children.filter(function f(elemento){return elemento.type === "Group"});
+    elementosAEliminar.forEach(function(elemento){
+      scene.remove(elemento);
+    });
   }
 
   function detectarIsotopoClickeado(elementoClickeado, idIsotopo){
