@@ -72,7 +72,7 @@
   }
 
   function limpiarElementosEnPantalla(){
-    scene.children = scene.children.filter(function f(elemento){return elemento.type !== "Group"});
+    scene.children = scene.children.filter(function f(elemento){return elemento.name !== "isotopo"});
   }
 
   function detectarIsotopoClickeado(elementoClickeado, idIsotopo){
