@@ -49,9 +49,9 @@
       event.stopPropagation();
     });
     
-    nucleousParticles = generarNucleo(elementoClickeado, elementoClickeado.info.isotopes[0]);
-    protons = nucleousParticles[0];
-    neutrons = nucleousParticles[1];
+    nucleo = generarNucleo(elementoClickeado, elementoClickeado.info.isotopes[0]);
+    protons = nucleo.children[1];
+    neutrons = nucleo.children[2];
     render();
 
     //Revisar si incluir el listener aca
@@ -64,9 +64,9 @@
     isotopo = detectarIsotopoClickeado(elementoClickeado, idIsotopo);
     limpiarElementosEnPantalla();
     
-    nucleousParticles = generarNucleo(elementoClickeado, isotopo);
-    protons = nucleousParticles[0];
-    neutrons = nucleousParticles[1];
+    nucleo = generarNucleo(elementoClickeado, isotopo);
+    protons = nucleo.children[1];
+    neutrons = nucleo.children[2];
     render();
     
   }
@@ -159,16 +159,16 @@
   $(document).on('change','.toggle',function() {
     if($(this).hasClass('toggle-protones')) {
       if($(this).is(':checked')) {
-        scene.add(protons);
+        protons.visible = true;
       } else {
-        scene.remove(protons);
+        protons.visible = false;
       }
     }
     if($(this).hasClass('toggle-neutrones')) {
       if($(this).is(':checked')) {
-        scene.add(neutrons);
+        neutrons.visible = true;
       } else {
-        scene.remove(neutrons);
+        neutrons.visible = false;
       }
     }
     

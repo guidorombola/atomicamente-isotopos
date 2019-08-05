@@ -4,6 +4,7 @@ var colorNeutrones = 0xff0000;
 function generarNucleo(elemento, isotopo){
   
   nucleo = new THREE.Group();
+  nucleo.name = 'isotopo';
   
   var radio = 5,
       segmentos = 50,
@@ -28,14 +29,16 @@ function generarNucleo(elemento, isotopo){
     
   nucleo.add(esfera);
   
-  var protones = generarProtones(elemento)
-  var neutrones = generarNeutrones(isotopo)
-    
-  scene.add(nucleo);
-  scene.add(protones);
-  scene.add(neutrones);
+  var protones = generarProtones(elemento);
+  var neutrones = generarNeutrones(isotopo);
+  protones.name = 'protones';
+  neutrones.name = 'neutrones';
   
-  return [protones, neutrones];
+  nucleo.add(protones);
+  nucleo.add(neutrones);
+  scene.add(nucleo);
+  
+  return nucleo;
 }
 
 function generarProtones(elemento){
