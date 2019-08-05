@@ -76,14 +76,10 @@
   }
 
   function detectarIsotopoClickeado(elementoClickeado, idIsotopo){
-    var isotopeSelected;
-
-    elementoClickeado.info.isotopes.forEach(function(element) {
-      if(element.name.toLowerCase() === idIsotopo) {
-        isotopeSelected = element;
-      }
-    });
-    return isotopeSelected;
+    var isotopoSeleccionado = elementoClickeado.info.isotopes.find(
+      function(isotopo){return isotopo.name.toLowerCase() === idIsotopo
+      });
+    return isotopoSeleccionado;
   }
 
   function detectarElementoClickeado(elementoActual){
