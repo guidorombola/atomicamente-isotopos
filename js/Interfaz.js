@@ -133,21 +133,21 @@
     .attr('class', 'dropdown-menu')
     .attr('aria-labelledby', 'dropdownMenu0');
     var item;
-    if(infoToAdd) {
-      infoToAdd.forEach(function(element) {
-        nombre = element.name;
-        item = $('<li></li>');
-        item.append($('<a></a>'));
-        var isotopo = $('<input>')
-        .attr('type', 'radio')
-        .attr('name', 'isotopo')
-        .attr('class', 'isotopo')
-        .attr('id', nombre.toLowerCase());    
-        item.children().append(isotopo);
-        item.children().append(nombre);
-        htmlToAdd.append(item);
-      });
-    }
+    
+    infoToAdd.forEach(function(element) {
+      nombre = element.name;
+      item = $('<li></li>');
+      item.append($('<a></a>'));
+      var isotopo = $('<input>')
+      .attr('type', 'radio')
+      .attr('name', 'isotopo')
+      .attr('class', 'isotopo')
+      .attr('id', nombre.toLowerCase());    
+      item.children().append(isotopo);
+      item.children().append(nombre);
+      htmlToAdd.append(item);
+    });
+    
     var elementoMasAbundante = htmlToAdd.children()[0];
     var radioButtonElementoMasAbundante = $($(elementoMasAbundante).children()[0]).children()[0];
     $(radioButtonElementoMasAbundante).attr('checked', 'true');
