@@ -156,21 +156,10 @@
     $('#dropup-isotopes').append(button);
   }
 
-  $(document).on('change','.toggle',function() {
-    if($(this).hasClass('toggle-protones')) {
-      if($(this).is(':checked')) {
-        protons.visible = true;
-      } else {
-        protons.visible = false;
-      }
-    }
-    if($(this).hasClass('toggle-neutrones')) {
-      if($(this).is(':checked')) {
-        neutrons.visible = true;
-      } else {
-        neutrons.visible = false;
-      }
-    }
-    
+  $(document).on('change','.toggle-protones',function() {
+    protons.visible = $(this).is(':checked');
+  });
+  $(document).on('change','.toggle-neutrones',function() {
+    neutrons.visible = $(this).is(':checked');
   });
 
