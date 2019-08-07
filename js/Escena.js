@@ -37,7 +37,7 @@ function render() {
 
 // Rotation around the center
 var controls;
-controls = new THREE.OrbitControls( camera );
+controls = new THREE.OrbitControls( camera, renderer.domElement);
 controls.addEventListener( 'change', render );
 controls.update();
 
