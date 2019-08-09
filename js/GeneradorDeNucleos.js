@@ -1,3 +1,5 @@
+const THREE = require('three');
+
 var colorProtones = 0x0000ff;
 var colorNeutrones = 0xff0000;
 
