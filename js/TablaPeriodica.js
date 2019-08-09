@@ -1,7 +1,7 @@
 /* Sources of information for elements */
 // Define elements included
 //En isotopos podriamos poner las posiciones de los isotopos
-var elementsIncluded = [{
+export var elementsIncluded = [{
   symbol : 'H',
   name : 'Hidrógeno',
   info : {

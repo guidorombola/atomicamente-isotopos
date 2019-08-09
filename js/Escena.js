@@ -1,44 +1,49 @@
-var three = THREE;
+export var renderer = new THREE.WebGLRenderer({ alpha : true });
+export var scene = new THREE.Scene();
+export var camera = new THREE.PerspectiveCamera(100, document.getElementById('page-content-wrapper').offsetWidth/window.innerHeight, 0.1, 1000);
 
-var raycaster = new THREE.Raycaster();
-var mouse = new THREE.Vector2(), INTERSECTED;
-var scene = new three.Scene();
-var camera = new three.PerspectiveCamera(100, document.getElementById('page-content-wrapper').offsetWidth/window.innerHeight, 0.1, 1000);
-// Here, the position of the camera is tilted
-camera.position.z = camera.position.z+5;
-camera.position.x = camera.position.x+5;
-camera.position.y = camera.position.y+0;
+export function comenzarEscena(){
 
-var renderer = new three.WebGLRenderer({ alpha : true });
-renderer.setClearColor( 0xFFFFFF, 0 );
-$(document).ready(function() {
-  camera.updateProjectionMatrix(40, document.getElementById('page-content-wrapper').offsetWidth/window.innerHeight, 0.1, 1000);
-  renderer.setSize(document.getElementById('page-content-wrapper').offsetWidth, window.innerHeight);
-});
+  var three = THREE;
 
-document.getElementById('AtomicStage').appendChild(renderer.domElement);
+  var raycaster = new THREE.Raycaster();
+  var mouse = new THREE.Vector2(), INTERSECTED;
+  // Here, the position of the camera is tilted
+  camera.position.z = camera.position.z+5;
+  camera.position.x = camera.position.x+5;
+  camera.position.y = camera.position.y+0;
 
-// Add light 
-var ambient = new THREE.AmbientLight(0x747474, 6);
-var pointLight = new THREE.DirectionalLight( 0xffffff, 8);
-pointLight.position.set( 1, 0, 0 ).normalize();
-scene.add( pointLight );
-var pointLight = new THREE.DirectionalLight( 0xffffff, 2);
-pointLight.position.set( -1, 0, 0 ).normalize();
-scene.add( pointLight );
+  renderer.setClearColor( 0xFFFFFF, 0 );
+  $(document).ready(function() {
+    camera.updateProjectionMatrix(40, document.getElementById('page-content-wrapper').offsetWidth/window.innerHeight, 0.1, 1000);
+    renderer.setSize(document.getElementById('page-content-wrapper').offsetWidth, window.innerHeight);
+  });
 
-scene.add(ambient);
+  document.getElementById('AtomicStage').appendChild(renderer.domElement);
 
-THREEx.WindowResize(renderer, camera);
+  // Add light 
+  var ambient = new THREE.AmbientLight(0x747474, 6);
+  var pointLight = new THREE.DirectionalLight( 0xffffff, 8);
+  pointLight.position.set( 1, 0, 0 ).normalize();
+  scene.add( pointLight );
+  var pointLight = new THREE.DirectionalLight( 0xffffff, 2);
+  pointLight.position.set( -1, 0, 0 ).normalize();
+  scene.add( pointLight );
 
-function render() {
-    renderer.render(scene, camera);
+  scene.add(ambient);
+
+  THREEx.WindowResize(renderer, camera);
+
+  // Rotation around the center
+  var controls;
+  controls = new THREE.OrbitControls( camera, renderer.domElement);
+  controls.addEventListener( 'change', render );
+  controls.update();
+
+  render();
+
 }
 
-// Rotation around the center
-var controls;
-controls = new THREE.OrbitControls( camera, renderer.domElement);
-controls.addEventListener( 'change', render );
-controls.update();
-
-render();
+export function render() {
+  renderer.render(scene, camera);
+}
