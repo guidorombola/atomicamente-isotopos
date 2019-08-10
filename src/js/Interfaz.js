@@ -1,6 +1,9 @@
 import {generarNucleo} from './GeneradorDeNucleos';
 import {elementsIncluded} from './TablaPeriodica';
 import {comenzarEscena, render, scene} from './Escena';
+import $ from 'jquery';
+import 'bootstrap/dist/js/bootstrap.bundle';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/estilos.css';
 
 var protons, neutrons;

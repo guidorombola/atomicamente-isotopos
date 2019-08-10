@@ -1,3 +1,4 @@
+import $ from 'jquery';
 const THREE = require('three');
 const WindowResize = require('three-window-resize');
 const OrbitControls = require('three-orbitcontrols');
