@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+
+    <title>Isotopos</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">		
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">	
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+  <div class="container-fluid" id="wrapper">  
+    <div class="row">   
+        <!-- Barra lateral -->
+        <div class="col-md-2" id="sidebar-wrapper">
+            <div id="colapso1" class="collapse dont-collapse-sm">
+              <h1 id="titulo-elementos">Elementos</h1>
+              <div class="container periodic-menu"></div>
+            </div>
+        </div>
+        <!-- Graficos -->
+        <div class="col-md-10" id="page-content-wrapper"> 
+          <div class="d-md-none">
+              <button type="button" id="menu-toggle" class="btn navbar-toggle" data-toggle="collapse" data-target="#colapso1">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+          <div class="row">
+            <p class="lead" id="start-info">Clickea un elemento para comenzar</p>
+            <div id="bottom-legend">
+              <div class="row">
+                <div class="col-12">
+                  <h3><span class="element-name"></span> (<span class="element-symbol"></span>)</h3>
+                  <p><span class="nameHistory"></span></p>
+                  <!--DESPLEGABLE ISOTOPOS-->
+                  <div class="dropup" id="dropup-isotopes">        
+                  </div>
+                  <!--DESPLEGABLE NUCLEO-->
+                  <div class="dropup" id="dropup-nucleus">
+                  </div>
+                  <p id="help-info">Scroll para hacer zoom, arrastrar para rotar nucleo.</p>
+                </div>
+              </div>
+            </div>
+            <div id="AtomicStage"></div>
+          </div>
+        </div>
+  </div>
+
+</body>
+
+</html>
