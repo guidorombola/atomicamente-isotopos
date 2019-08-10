@@ -38,6 +38,8 @@ export function comenzarEscena(){
   // Rotation around the center
   var controls;
   controls = new OrbitControls( camera, renderer.domElement);
+  controls.enablePan = false;
+
   controls.addEventListener( 'change', render );
   controls.update();
 
