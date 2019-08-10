@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
-    entry: './src/Interfaz.js',
+    entry: './src/js/Interfaz.js',
     output: {
         path: __dirname + '/build',
         filename: 'bundle.js'

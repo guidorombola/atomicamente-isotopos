@@ -1,7 +1,7 @@
 import {generarNucleo} from './GeneradorDeNucleos';
 import {elementsIncluded} from './TablaPeriodica';
 import {comenzarEscena, render, scene} from './Escena';
-import './estilos.css';
+import '../css/estilos.css';
 
 var protons, neutrons;
 
