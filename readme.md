@@ -15,10 +15,10 @@ $ npm install
 ### Para ejecutar la aplicación (Versión de producción)
 
 ```sh
-$ npm build
+$ npm run build
 ```
 
-Y abrir el archivo index.html que se encuentra en el directorio build/.
+Y abrir el archivo index.html que se encuentra en el directorio build/ desde el navegador.
 
 
 ### Para la versión de desarrollo
