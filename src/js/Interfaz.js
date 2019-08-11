@@ -171,8 +171,10 @@ function agregarSeleccionDeIsotopos(elementoClickeado){
 
 $(document).on('change','.toggle-protones',function() {
   protons.visible = $(this).is(':checked');
+  render();
 });
 $(document).on('change','.toggle-neutrones',function() {
   neutrons.visible = $(this).is(':checked');
+  render();
 });
 
