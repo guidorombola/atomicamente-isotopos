@@ -5,7 +5,7 @@ Graficador de núcleos de elementos de la tabla periódica orientado a estudiant
 Desarrollado con la biblioteca de gráficos 3D Three.js.
 
 ## Instalación
-Requiere Node.js y npm. Para instalar las dependencias necesarias:
+Requiere [Node.js](https://nodejs.org/) y [npm] (https://www.npmjs.com/get-npm). Para instalar las dependencias necesarias:
 
 ```sh
 $ cd atomicamente-isotopos
