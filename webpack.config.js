@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
     entry: './src/js/Interfaz.js',
     output: {
@@ -8,7 +9,9 @@ module.exports = {
     },
 
     devServer: {
-        port: 5000
+        host: '0.0.0.0',
+        port: 5000,
+        open: true
     },
 
     module: {
