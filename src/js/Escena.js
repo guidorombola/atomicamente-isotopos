@@ -18,6 +18,7 @@ export function comenzarEscena(){
   renderer.setClearColor( 0xFFFFFF, 0 );
   $(document).ready(function() {
     camera.updateProjectionMatrix(40, document.getElementById('page-content-wrapper').offsetWidth/window.innerHeight, 0.1, 1000);
+    renderer.setPixelRatio( window.devicePixelRatio );
     renderer.setSize(document.getElementById('page-content-wrapper').offsetWidth, window.innerHeight);
   });
 
