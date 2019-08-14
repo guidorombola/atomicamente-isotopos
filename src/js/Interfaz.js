@@ -49,7 +49,7 @@ function graficarIsotopoMasAbundante(elementoActual){
   limpiarElementosEnPantalla();
   var elementoClickeado = detectarElementoClickeado(elementoActual); 
   
-  $('.element-name').html(elementoClickeado.name);
+  $('.element-name').html(elementoClickeado.info.isotopes[0].name);
   $('.element-symbol').html(elementoClickeado.symbol);
   $('#bottom-legend').show();
   
@@ -82,6 +82,7 @@ function graficarIsotopoSeleccionado(elementoClickeado, idIsotopo){
   render();
   var checkProtones = $('.toggle-protones');
   var checkNeutrones = $('.toggle-neutrones');
+  $('.element-name').html(isotopo.name);
   actualizarVisibilidad(protons, checkProtones);
   actualizarVisibilidad(neutrons, checkNeutrones);
 }
