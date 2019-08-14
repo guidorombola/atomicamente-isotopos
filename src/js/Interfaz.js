@@ -75,13 +75,15 @@ function graficarIsotopoMasAbundante(elementoActual){
 function graficarIsotopoSeleccionado(elementoClickeado, idIsotopo){
   var isotopo = detectarIsotopoClickeado(elementoClickeado, idIsotopo);
   limpiarElementosEnPantalla();
-  
   var nucleo = generarNucleo(elementoClickeado, isotopo);
   scene.add(nucleo);
   protons = nucleo.children[1];
   neutrons = nucleo.children[2];
   render();
-  
+  var checkProtones = $('.toggle-protones');
+  var checkNeutrones = $('.toggle-neutrones');
+  actualizarVisibilidad(protons, checkProtones);
+  actualizarVisibilidad(neutrons, checkNeutrones);
 }
 
 function limpiarElementosEnPantalla(){
@@ -170,11 +172,16 @@ function agregarSeleccionDeIsotopos(elementoClickeado){
 }
 
 $(document).on('change','.toggle-protones',function() {
-  protons.visible = $(this).is(':checked');
-  render();
+  var check = $(this);
+  actualizarVisibilidad(protons, check);
 });
 $(document).on('change','.toggle-neutrones',function() {
-  neutrons.visible = $(this).is(':checked');
-  render();
+  var check = $(this);
+  actualizarVisibilidad(neutrons, check);
 });
+
+function actualizarVisibilidad(particulas, check){
+  particulas.visible = check.is(':checked');
+  render();
+}
 
