@@ -3,7 +3,7 @@ const THREE = require('three');
 const WindowResize = require('three-window-resize');
 const OrbitControls = require('three-orbitcontrols');
 
-export var renderer = new THREE.WebGLRenderer({ alpha : true });
+export var renderer = new THREE.WebGLRenderer({alpha : true, antialias: true});
 export var scene = new THREE.Scene();
 export var camera = new THREE.PerspectiveCamera(100, document.getElementById('page-content-wrapper').offsetWidth/window.innerHeight, 0.1, 1000);
 
