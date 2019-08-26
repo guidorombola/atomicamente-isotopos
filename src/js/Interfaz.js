@@ -121,7 +121,7 @@ function agregarChecksProtonesNeutrones(){
   .attr('aria-labelledby', 'dropdownMenu1');
     infoToAdd.forEach(function(element) {
       var item = $('<li></li>');
-      item.append($('<a></a>'));
+      item.append($('<a></a>').attr('id', element.toLowerCase() + '-leyenda'));
       var checkbox = $('<input>')
       .attr('type', 'checkbox')
       .attr('checked', 'true')

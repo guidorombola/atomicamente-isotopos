@@ -103,6 +103,14 @@ input[type=checkbox], input[type=radio] {
   height: 100vh;
 }
 
+a#protones-leyenda {
+  color: #0000ff;
+}
+
+a#neutrones-leyenda {
+  color: #ff0000;
+}
+
 @media (min-width: 768px) {
   .collapse.dont-collapse-sm {
     display: block;
