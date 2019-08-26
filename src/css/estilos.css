@@ -118,3 +118,9 @@ a#neutrones-leyenda {
     visibility: visible;
   }
 }
+
+@media (min-width: 768px) and (max-width: 992px){
+  #titulo-elementos{
+    font-size: 1.3em;
+  }
+}
