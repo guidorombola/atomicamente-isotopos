@@ -22,15 +22,38 @@
 </head>
 
 <body>
+    <div class="modal fade" id="modal-informacion" tabindex="-1" role="dialog" aria-labelledby="modal-informacionTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-informacionTitle">Graficador de isótopos de AtómicaMente</h5>
+            </div>
+            <div class="modal-body">
+              ¡Bienvenid@! Algunas consideraciones que pueden serte útiles:
+              <br>
+              <br>
+              <ul>
+                <li>Clickea un elemento para ver su núcleo graficado. Al hacer esto, verás en primer lugar el isótopo más abundante en la naturaleza.</li>
+                <li>Podrás cambiar entre varios isótopos para ese elemento yendo a la pestaña 'Isótopos'.</li>
+                <li>También podrás visualizar y ocultar los protones (azul) y los neutrones (rojo) para ver cómo varían entre isótopos, desde la pestaña 'Explorar Núcleo'.</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">¡Comencemos!</button>
+            </div>
+          </div>
+        </div>
+    </div>
   <div class="container-fluid" id="wrapper">  
     <div class="row">   
         <!-- Barra lateral -->
         <div class="col-md-2" id="sidebar-wrapper">
             <div id="colapso1" class="collapse dont-collapse-sm">
-              <div class="container periodic-menu">
-                <h1 id="titulo-elementos">Elementos</h1>
-              </div>
-              
+              <h1 id="titulo-elementos">Elementos</h1>
+              <div class="container periodic-menu"></div>
+              <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#modal-informacion">
+                  <i class="fas fa-info"></i> Información útil
+              </button>
             </div>
         </div>
         <div>

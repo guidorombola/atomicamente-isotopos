@@ -11,6 +11,10 @@ var protons, neutrons;
 comenzarEscena();
 mostrarElementosSeleccionables();
 
+$(document).ready(function(){
+  $('#modal-informacion').modal();
+});
+
 $(document).on('click','.element, .periodic-element',function() {
   var elementoActual = this;
   graficarIsotopoMasAbundante(elementoActual);
