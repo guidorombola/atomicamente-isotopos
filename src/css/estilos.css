@@ -86,7 +86,7 @@ button#menu-toggle {
   margin-bottom: 10px;
 }
 
-.dropdown-menu > li > a {
+.dropdown-menu > li > label {
   padding: 5px 10px;
 }
 
@@ -103,11 +103,11 @@ input[type=checkbox], input[type=radio] {
   height: 100vh;
 }
 
-a#protones-leyenda {
+label#protones-leyenda {
   color: #0000ff;
 }
 
-a#neutrones-leyenda {
+label#neutrones-leyenda {
   color: #ff0000;
 }
 

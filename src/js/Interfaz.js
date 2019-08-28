@@ -125,11 +125,14 @@ function agregarChecksProtonesNeutrones(){
   .attr('aria-labelledby', 'dropdownMenu1');
     infoToAdd.forEach(function(element) {
       var item = $('<li></li>');
-      item.append($('<a></a>').attr('id', element.toLowerCase() + '-leyenda'));
+      item.append($('<label></label>')
+      .attr('id', element.toLowerCase() + '-leyenda'))
+      .attr('for', element.toLowerCase());
       var checkbox = $('<input>')
       .attr('type', 'checkbox')
       .attr('checked', 'true')
-      .attr('class', 'toggle toggle-'+ element.replace(/ /g,'-').toLowerCase());
+      .attr('class', 'toggle toggle-'+ element.replace(/ /g,'-').toLowerCase())
+      .attr('id', element.toLowerCase());
       item.children().append(checkbox);    
       item.children().append(element);
       htmlToAdd.append(item) 
@@ -157,7 +160,7 @@ function agregarSeleccionDeIsotopos(elementoClickeado){
   infoToAdd.forEach(function(element) {
     var nombre = element.name;
     item = $('<li></li>');
-    item.append($('<a></a>'));
+    item.append($('<label></label>').attr('for', nombre.toLowerCase()));
     var isotopo = $('<input>')
     .attr('type', 'radio')
     .attr('name', 'isotopo')
