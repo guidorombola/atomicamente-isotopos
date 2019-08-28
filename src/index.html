@@ -3,18 +3,19 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
 
-    <title>Isotopos</title>
-    		
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">	
-    		
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+  <title>Isotopos</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -22,70 +23,74 @@
 </head>
 
 <body>
-    <div class="modal fade" id="modal-informacion" tabindex="-1" role="dialog" aria-labelledby="modal-informacionTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modal-informacionTitle">Graficador de isótopos de AtómicaMente</h5>
-            </div>
-            <div class="modal-body">
-              ¡Bienvenid@! Algunas consideraciones que pueden serte útiles:
-              <br>
-              <br>
-              <ul>
-                <li>Clickea un elemento para ver su núcleo graficado. Al hacer esto, verás en primer lugar el isótopo más abundante en la naturaleza.</li>
-                <li>Podrás cambiar entre varios isótopos para ese elemento yendo a la pestaña 'Isótopos'.</li>
-                <li>También podrás visualizar y ocultar los protones (azul) y los neutrones (rojo) para ver cómo varían entre isótopos, desde la pestaña 'Explorar Núcleo'.</li>
-              </ul>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-dismiss="modal">¡Comencemos!</button>
-            </div>
-          </div>
+  <div class="modal fade" id="modal-informacion" tabindex="-1" role="dialog" aria-labelledby="modal-informacionTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-informacionTitle">Graficador de isótopos de AtómicaMente</h5>
         </div>
+        <div class="modal-body">
+          ¡Bienvenid@! Algunas consideraciones que pueden serte útiles:
+          <br>
+          <br>
+          <ul>
+            <li>Clickea un elemento para ver su núcleo graficado. Al hacer esto, verás en primer lugar el isótopo más
+              abundante en la naturaleza.</li>
+            <li>Podrás cambiar entre varios isótopos para ese elemento yendo a la pestaña 'Isótopos'.</li>
+            <li>También podrás visualizar y ocultar los protones (azul) y los neutrones (rojo) para ver cómo varían
+              entre isótopos, desde la pestaña 'Explorar Núcleo'.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">¡Comencemos!</button>
+        </div>
+      </div>
     </div>
-  <div class="container-fluid" id="wrapper">  
-    <div class="row">   
-        <!-- Barra lateral -->
-        <div class="col-md-2" id="sidebar-wrapper">
-            <div id="colapso1" class="collapse dont-collapse-sm">
-              <h1 id="titulo-elementos">Elementos</h1>
-              <div class="container periodic-menu"></div>
-              <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#modal-informacion">
-                  <i class="fas fa-info"></i> Información útil
-              </button>
-            </div>
+  </div>
+  <div class="container-fluid" id="wrapper">
+    <div class="row">
+      <!-- Barra lateral -->
+      <div class="col-md-2" id="sidebar-wrapper">
+        <div id="colapso1" class="collapse dont-collapse-sm">
+          <h1 id="titulo-elementos">Elementos</h1>
+          <div class="container periodic-menu"></div>
+          <button type="button" class="btn btn-info mb-2" data-toggle="modal" data-target="#modal-informacion">
+            <i class="fas fa-info"></i> Información útil
+          </button>
         </div>
-        <div>
+      </div>
+      <div>
         <div></div>
+      </div>
+      <!-- Graficos -->
+      <div class="col-md-10" id="page-content-wrapper">
+        <div class="d-md-none">
+          <button type="button" id="menu-toggle" class="btn navbar-toggle" data-toggle="collapse"
+            data-target="#colapso1">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
-        <!-- Graficos -->
-        <div class="col-md-10" id="page-content-wrapper"> 
-          <div class="d-md-none">
-              <button type="button" id="menu-toggle" class="btn navbar-toggle" data-toggle="collapse" data-target="#colapso1">
-                <i class="fas fa-bars"></i>
-              </button>
-            </div>
-          <div class="row">
-            <p class="lead" id="start-info">Clickea un elemento para comenzar</p>
-            <div id="bottom-legend">
-              <div class="row">
-                <div class="col-12">
-                  <h3><span class="element-name"></span> (<span class="element-symbol"></span>)</h3>
-                  <!--DESPLEGABLE ISOTOPOS-->
-                  <div class="dropup" id="dropup-isotopes">        
-                  </div>
-                  <!--DESPLEGABLE NUCLEO-->
-                  <div class="dropup" id="dropup-nucleus">
-                  </div>
-                  <p id="help-info">Scroll para hacer zoom, arrastrar para rotar nucleo.</p>
+        <div class="row">
+          <p class="lead" id="start-info">Clickea un elemento para comenzar</p>
+          <div id="bottom-legend">
+            <div class="row">
+              <div class="col-12">
+                <h3><span class="element-name"></span> (<span class="element-symbol"></span>)</h3>
+                <!--DESPLEGABLE ISOTOPOS-->
+                <div class="dropup" id="dropup-isotopes">
                 </div>
+                <!--DESPLEGABLE NUCLEO-->
+                <div class="dropup" id="dropup-nucleus">
+                </div>
+                <p id="help-info">Scroll para hacer zoom, arrastrar para rotar nucleo.</p>
               </div>
             </div>
-            <div id="AtomicStage"></div>
           </div>
+          <div id="AtomicStage"></div>
         </div>
-  </div>
+      </div>
+    </div>
 
 </body>
 
