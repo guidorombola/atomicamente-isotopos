@@ -1,3 +1,6 @@
+/* Sources of information for elements */
+// Define elements included
+//En isotopos podriamos poner las posiciones de los isotopos
 export var elementsIncluded = [{
   symbol: 'H',
   name: 'Hidrógeno',
@@ -10,19 +13,25 @@ export var elementsIncluded = [{
     state: 'Gas',
     meltingPoint: '13.99 K',
     boilingPoint: '20.27 K',
-    protons: 1,
+    protons: [{ x: 0, y: 0, z: 0 }],
     isotopes: [
       {
         name: "Hidrogeno 1",
-        neutrons: 0
+        positions: []
       },
       {
         name: "Hidrogeno 2",
-        neutrons: 1
+        positions:
+          [
+            { x: 0, y: 0, z: 0.5 }
+          ]
       },
       {
         name: "Hidrogeno 3",
-        neutrons: 2
+        positions: [
+          { x: -0.5, y: 0, z: 0 },
+          { x: 0.5, y: 0, z: 0 }
+        ],
       },
     ],
     electronConfig: '1s<sup>1</sup>',
@@ -53,15 +62,21 @@ export var elementsIncluded = [{
     oxidationState: '-',
     nameHistory: 'Greek, <em>helios</em> meaning sun.',
     link: 'http://www.rsc.org/periodic-table/element/2/helium',
-    protons: 2,
+    protons: [{ x: 0.5, y: 0, z: 0 }, { x: -0.5, y: 0, z: 0 }],
     isotopes: [
       {
         name: "Helio 4",
-        neutrons: 2
+        positions: [
+          { x: 0, y: 0.5, z: 0 },
+          { x: 0, y: -0.5, z: 0 }
+        ],
       },
       {
         name: "Helio 3",
-        neutrons: 1
+        positions:
+          [
+            { x: 0, y: 0.5, z: 0 },
+          ]
       },
     ],
   },
@@ -83,15 +98,20 @@ export var elementsIncluded = [{
     state: 'Solid',
     meltingPoint: '453.6 K',
     boilingPoint: '1615 K',
-    protons: 3,
+    protons: [{ x: 0.5, y: 0, z: 0 }, { x: -0.5, y: 0, z: 0 }, { x: 0, y: 0, z: -0.5 }],
     isotopes: [
       {
         name: "Litio 7",
-        neutrons: 4
+        positions: [
+          { x: 0, y: 0.5, z: 0 }, { x: 0, y: -0.5, z: 0 }, { x: 0, y: 0, z: 0.5 }, { x: 0.5, y: 0.5, z: 0 }
+        ],
       },
       {
         name: "Litio 6",
-        neutrons: 3
+        positions:
+          [
+            { x: 0, y: 0.5, z: 0 }, { x: 0, y: -0.5, z: 0 }, { x: 0, y: 0, z: 0.5 }
+          ]
       },
 
     ],
@@ -118,19 +138,27 @@ export var elementsIncluded = [{
     state: 'Solid',
     meltingPoint: '1560 K',
     boilingPoint: '2471 K',
-    protons: 4,
+    protons: [{ x: 0.5, y: 0, z: 0 }, { x: -0.5, y: 0, z: 0 }, { x: 0, y: 0, z: -0.5 }, { x: 0.5, y: 0.5, z: 0.5 }],
     isotopes: [
       {
         name: "Berilio 9",
-        neutrons: 5
+        positions: [
+          { x: 0, y: 0.5, z: 0 }, { x: 0, y: -0.5, z: 0 }, { x: 0, y: 0, z: 0.5 }, { x: -0.5, y: -0.5, z: -0.5 }, { x: 0, y: -0.5, z: -0.5 }
+        ],
       },
       {
         name: "Berilio 10",
-        neutrons: 6
+        positions:
+          [
+            { x: 0, y: 0.5, z: 0 }, { x: 0, y: -0.5, z: 0 }, { x: 0, y: 0, z: 0.5 }, { x: -0.5, y: -0.5, z: -0.5 }, { x: 0, y: -0.5, z: -0.5 }, { x: 0.5, y: 0.5, z: -0.5 }
+          ]
       },
       {
         name: "Berilio 7",
-        neutrons: 3
+        positions:
+          [
+            { x: 0, y: 0.5, z: 0 }, { x: 0, y: -0.5, z: 0 }, { x: 0, y: 0, z: 0.5 }
+          ]
       },
     ],
     electronConfig: '2s<sup>2</sup>',
@@ -156,15 +184,20 @@ export var elementsIncluded = [{
     state: 'Solid',
     meltingPoint: '2350 K',
     boilingPoint: '4273 K',
-    protons: 5,
+    protons: [{ x: 0.5, y: 0, z: 0 }, { x: -0.5, y: 0, z: 0 }, { x: 0, y: 0, z: -0.5 }, { x: 0.5, y: 0.5, z: 0.5 }, { x: 0.5, y: 0.5, z: -0.5 }],
     isotopes: [
       {
         name: "Boro 11",
-        neutrons: 6
+        positions: [
+          { x: 0, y: 0.5, z: 0 }, { x: 0, y: -0.5, z: 0 }, { x: 0, y: 0, z: 0.5 }, { x: -0.5, y: -0.5, z: -0.5 }, { x: -0.5, y: -0.5, z: 0.5 }, { x: 0, y: -0.5, z: -0.5 }
+        ],
       },
       {
         name: "Boro 10",
-        neutrons: 5
+        positions:
+          [
+            { x: 0, y: 0.5, z: 0 }, { x: 0, y: -0.5, z: 0 }, { x: 0, y: 0, z: 0.5 }, { x: -0.5, y: -0.5, z: -0.5 }, { x: -0.5, y: -0.5, z: 0.5 }
+          ]
       },
     ],
     //isotopes : '<sup>11</sup>B',
@@ -191,19 +224,27 @@ export var elementsIncluded = [{
     state: 'Solid',
     meltingPoint: '2350 K',
     boilingPoint: '4273 K',
-    protons: 6,
+    protons: [{ x: 0.5, y: 0, z: 0 }, { x: -0.5, y: 0, z: 0 }, { x: 0, y: 0, z: -0.5 }, { x: 0.5, y: 0.5, z: 0.5 }, { x: 0.5, y: 0.5, z: -0.5 }, { x: 0.5, y: -0.5, z: 0.5 }],
     isotopes: [
       {
         name: "Carbono 12",
-        neutrons: 6
+        positions: [
+          { x: 0, y: 0.5, z: 0 }, { x: 0, y: -0.5, z: 0 }, { x: 0, y: 0, z: 0.5 }, { x: -0.5, y: -0.5, z: -0.5 }, { x: -0.5, y: -0.5, z: 0.5 }, { x: 0.5, y: -0.5, z: -0.5 }
+        ],
       },
       {
         name: "Carbono 13",
-        neutrons: 7
+        positions:
+          [
+            { x: 0, y: 0.5, z: 0 }, { x: 0, y: -0.5, z: 0 }, { x: 0, y: 0, z: 0.5 }, { x: -0.5, y: -0.5, z: -0.5 }, { x: -0.5, y: -0.5, z: 0.5 }, { x: 0.5, y: -0.5, z: -0.5 }, { x: 0.5, y: 0, z: -0.5 }
+          ]
       },
       {
         name: "Carbono 14",
-        neutrons: 8
+        positions:
+          [
+            { x: 0, y: 0.5, z: 0 }, { x: 0, y: -0.5, z: 0 }, { x: 0, y: 0, z: 0.5 }, { x: -0.5, y: -0.5, z: -0.5 }, { x: -0.5, y: -0.5, z: 0.5 }, { x: 0.5, y: 0, z: -0.5 }, { x: 0.5, y: -0.5, z: -0.5 }, { x: -0.5, y: 0, z: -0.5 }
+          ]
       },
     ],
     electronConfig: '2s<sup>2</sup>2p<sup>2</sup>',
