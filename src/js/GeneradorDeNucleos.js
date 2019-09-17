@@ -47,7 +47,7 @@ export function generarNucleo(elemento, isotopo) {
 }
 
 function generarProtones(elemento) {
-  var cantidadDeProtones = elemento.info.protons;
+  var cantidadDeProtones = elemento.protons;
   return generarParticulasDelNucleo(posicionesProtones.slice(0, cantidadDeProtones), colorProtones);
 }
 

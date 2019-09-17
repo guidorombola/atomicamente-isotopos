@@ -33,8 +33,8 @@ function mostrarElementosSeleccionables() {
     elemento.append(element.symbol)
     periodoActual.append(elemento)
 
-    var numPeriodoActual = element.info.period;
-    if (index < elementsIncluded.length - 1 && elementsIncluded[index + 1].info.period !== numPeriodoActual) {
+    var numPeriodoActual = element.period;
+    if (index < elementsIncluded.length - 1 && elementsIncluded[index + 1].period !== numPeriodoActual) {
       periodoActual.append($('<div></div>').attr('class', 'clearfix'));
       $('.periodic-menu').append(periodoActual)
       periodoActual = $('<div></div>').attr('class', 'periodic-period');
@@ -55,7 +55,7 @@ function graficarIsotopoMasAbundante(elementoActual) {
   limpiarElementosEnPantalla();
   var elementoClickeado = detectarElementoClickeado(elementoActual);
 
-  $('.element-name').html(elementoClickeado.info.isotopes[0].name);
+  $('.element-name').html(elementoClickeado.isotopes[0].name);
   $('.element-symbol').html(elementoClickeado.symbol);
   $('#bottom-legend').show();
 
@@ -66,7 +66,7 @@ function graficarIsotopoMasAbundante(elementoActual) {
     event.stopPropagation();
   });
 
-  var nucleo = generarNucleo(elementoClickeado, elementoClickeado.info.isotopes[0]);
+  var nucleo = generarNucleo(elementoClickeado, elementoClickeado.isotopes[0]);
   scene.add(nucleo);
   protons = nucleo.children[1];
   neutrons = nucleo.children[2];
@@ -98,7 +98,7 @@ function limpiarElementosEnPantalla() {
 }
 
 function detectarIsotopoClickeado(elementoClickeado, idIsotopo) {
-  var isotopoSeleccionado = elementoClickeado.info.isotopes.find(
+  var isotopoSeleccionado = elementoClickeado.isotopes.find(
     function (isotopo) {
       return isotopo.name.toLowerCase() === idIsotopo
     });
@@ -154,7 +154,7 @@ function agregarSeleccionDeIsotopos(elementoClickeado) {
     .attr('aria-expanded', 'false');
   button.append('Isotopos ');
   button.append($('<span></span>').attr('class', 'caret'));
-  var infoToAdd = elementoClickeado.info.isotopes;
+  var infoToAdd = elementoClickeado.isotopes;
   var htmlToAdd = $('<ul></ul>')
     .attr('class', 'dropdown-menu')
     .attr('aria-labelledby', 'dropdownMenu0');
