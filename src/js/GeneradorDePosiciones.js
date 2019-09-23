@@ -5,7 +5,7 @@ function moduloVector(v) {
   for (let i = 0; i < v.length; i++) {
     suma += Math.pow(v[i], 2);
   }
-  return suma;
+  return Math.sqrt(suma);
 }
 
 function transformarAPosiciones(array) {
