@@ -9,7 +9,6 @@
     "popper.js": "^1.15.0",
     "three": "^0.107.0",
     "three-orbitcontrols": "^2.102.2",
-    "three-window-resize": "^1.0.4"
   },
   "devDependencies": {
     "mini-css-extract-plugin": "^0.8.0",
